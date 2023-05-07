@@ -1,0 +1,19 @@
+<div class="contain">
+<h2>SELECT THE SUBJECT THAT YOU WANT TO APPLY THE PHOTOCOPY</h2>
+	<div id="container" #checkboxContainer>
+		<table>
+			<tr *ngFor="let item of myData">
+				<td><input type="checkbox" [(ngModel)]="selectedItems[item]"></td>
+				<td>{{ item}}</td>
+			</tr>
+		</table>
+	</div>
+	<small>Please select any subject before you submit</small>
+	<input (click)="sendotp()" type="button" id="submit" value="Send otp" >
+	<input id="getotp" [(ngModel)]="getotp" type="text" maxlength="6" placeholder="eg.123456">
+	<small>You need to verify your otp to pay the amount</small>
+	<input id="ver-otp" type="button" value="Verify otp" (click)="verify_otp()">
+	<input *ngIf="showpayment" type="button" value="Pay {{payableamount}} Rs" id="pay-amt" (click)="pay_amount()">
+	
+</div>
+	

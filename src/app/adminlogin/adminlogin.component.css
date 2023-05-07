@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  -webkit-user-select: none;/*IE,etc*/
+  -moz-user-select: none; /*Mozzila Firefox*/
+  -ms-user-select: none;
+}
+body{
+    background-color: #FAFAFA;
+}
+.container{
+    background-color: #008080;
+    color: #fff;
+    height: 169px;
+    width: 100%;
+}
+.container .head-name{
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    padding: 23px;
+}
+.container marquee{
+    padding-top: 13px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.lgn{
+    width: 100%;
+    height: 76vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 170px;
+    background-color: white;
+    font-size: 20px;
+    gap: 5vh;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23008080' fill-opacity='1' d='M0,192L26.7,181.3C53.3,171,107,149,160,149.3C213.3,149,267,171,320,176C373.3,181,427,171,480,181.3C533.3,192,587,224,640,213.3C693.3,203,747,149,800,138.7C853.3,128,907,160,960,186.7C1013.3,213,1067,235,1120,245.3C1173.3,256,1227,256,1280,256C1333.3,256,1387,256,1413,256L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.lgn .contents{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #EEEEEE;
+    padding-top: 24px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 20px;
+    z-index: 10;
+    background-color: white;
+    border-radius: 20px;
+    background: #EEEEEE;
+}
+.lgn .contents p{
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+.lgn .contents input{
+    background-color: #FAFAFA;
+    padding: 10px;
+    width: 260px;
+}
+.lgn .contents button{
+    background-color: #008080;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-color: #EEEEEE;
+}
+.bottom{
+    position:fixed;
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-color: #008080;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 6px;
+}
+.bottom p{
+    padding-right: 5px;
+    padding-left: 5px;
+    line-height: 30px;
+}
+
+@media (min-width:576px)
+{
+    .container{
+        height: 117px;
+    }
+    .container marquee{
+        padding-top: 18px;
+        font-size: 20px;
+    }
+    .container .head-name{
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+        padding: 15px;
+    }
+    
+}

@@ -1,0 +1,99 @@
+<div class="heading">
+    <P>End Semester Exam Result - APR / MAY - 2023</P>
+</div>
+<div class="lgt">
+    <a href="http://localhost:4200"><img alt="Log out" src="assets/images/logout.png"></a>
+</div>
+<div class="details-std">
+    <div class="stddata">Student Name:&nbsp;<p id="name">{{name}}</p></div>
+    <div class="stddata">Register No / Aadhar No:&nbsp;<p id="stdregno">{{regno}}</p></div>
+    <div class="sgpa">SGPA: Refer Department CGPA: Refer Department</div>
+</div>
+<div class="sub-mark">
+    <table class="tabledata">
+        <tr>
+            <th>Semester</th>
+            <th>Course Name</th>
+            <th>Course Code</th>
+            <th>Credits</th>
+            <th>Grade</th>
+            <th>Result</th>
+        </tr>
+        <tr class="fill-color">
+            <td>5</td>
+            <td>SUBJECT1</td>
+            <td>001</td>
+            <td>4</td>
+            <td id="flat">{{s1}}</td>
+            <td id="c0"><span *ngIf="s1!='F'">Pass</span><span *ngIf="s1=='F'">Fail</span></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>SUBJECT2</td>
+            <td>002 </td>
+            <td>3</td>
+            <td id="st">{{s2}}</td>
+            <td id="c1"><span *ngIf="s2!='F'">Pass</span><span *ngIf="s2=='F'">Fail</span></td>
+        </tr>
+        <tr class="fill-color">
+            <td>5</td>
+            <td>SUBJECT3</td>
+            <td>003</td>
+            <td>4</td>
+            <td id="pp">{{s3}}</td>
+            <td id="c2"><span *ngIf="s3!='F'">Pass</span><span *ngIf="s3=='F'">Fail</span></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>SUBJECT4</td>
+            <td>004</td>
+            <td>1</td>
+            <td id="mp">{{s4}}</td>
+            <td id="c3"><span *ngIf="s4!='F'">Pass</span><span *ngIf="s4=='F'">Fail</span></td>
+        </tr>
+        <tr class="fill-color">
+            <td>5</td>
+            <td>SUBJECT5</td>
+            <td>005</td>
+            <td>1</td>
+            <td id="apt">{{s5}}</td>
+            <td id="c4"><span *ngIf="s5!='F'">Pass</span><span *ngIf="s5=='F'">Fail</span></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>SUBJECT6</td>
+            <td>006</td>
+            <td>1</td>
+            <td id="ggl">{{s6}}</td>
+            <td id="c5"><span *ngIf="s6!='F'">Pass</span><span *ngIf="s6=='F'">Fail</span></td>
+        </tr>
+        <tr class="fill-color">
+            <td>5</td>
+            <td>SUBJECT7</td>
+            <td>007</td>
+            <td>3</td>
+            <td id="mc">{{s7}}</td>
+            <td id="c6"><span *ngIf="s7!='F'">Pass</span><span *ngIf="s7=='F'">Fail</span></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>SUBJECT8</td>
+            <td>008</td>
+            <td>3</td>
+            <td id="uid">{{s8}}</td>
+            <td id="c7"> <span *ngIf="s8!='F'">Pass</span><span *ngIf="s8=='F'">Fail</span></td>
+        </tr>
+        <tr class="fill-color">
+            <td>5</td>
+            <td>SUBJECT9</td>
+            <td>009</td>
+            <td>3</td>
+            <td id="dppm">{{s9}}</td>
+            <td id="c8"><span *ngIf="s9!='F'">Pass</span><span *ngIf="s9=='F'">Fail</span></td>
+        </tr>
+        
+    </table>
+    <div class="request">
+    <p *ngIf="count>0 && !photocopyapplied" class="paper-download" (click)="applyrevaluation()"><button  class="btn-paper-download">APPLY FOR PHOTOCOPY</button></p>
+    <p  *ngIf="count>0 && !revaluationapplied" class="paper-download" (click)="applyphotocopy()"><button class="btn-paper-download">APPLY FOR REVALUATION</button></p>
+</div></div>

@@ -1,0 +1,138 @@
+:host{
+  margin: 0;
+    padding: 0;
+    user-select: none;
+  -webkit-user-select: none;/*IE,etc*/
+  -moz-user-select: none; /*Mozzila Firefox*/
+  -ms-user-select: none;
+}
+mat-toolbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-bar{
+  position: fixed;
+  top: 0;
+  font-size: 20px;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #008080;
+  color: white;
+
+  z-index: 1;
+  
+}
+.contain{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 20%;
+  margin-top: 5%;
+}
+.contain p{
+  border: 2px solid #008080;
+  height: 100%;
+}
+.viewdata{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .choosedept{
+    background-color: white;
+    height: 5vh;
+  }
+  .container1{
+    width: 30vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card{
+    background-color: white;
+  }
+  mat-form-field{
+    background-color: white;
+  }
+  hr{
+    border: solid 2px grey;
+    width: 100%;
+  }
+  .print-btn{
+    width: 100%;
+    height: auto;
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+  }
+  .print-btn button{
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1vh;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center; gap: 2vh; 
+  }
+  .print-btn button:hover{
+    cursor: pointer;
+    background-color: #006f6f;
+    box-shadow: 2px 2px 2px gray;
+  }
+  .container{
+    width: 100%;
+  }
+  table{
+    width: 100%;
+    border-spacing: 0;
+  }
+  tr{
+    width: 100%;
+  }
+  tr:nth-child(even){
+    background-color: rgb(202, 201, 201);
+  }
+  td{
+    width: auto;
+    gap: 0;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+ 
+  .viewdata mat-icon{
+    border-radius: 100%;
+    padding: 1vh;
+  }
+  .viewdata mat-icon:hover{
+    cursor: pointer;
+  }
+
+  @media (max-width:400px){
+    
+    .contain{
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      padding: 1vh;
+      gap: 2vh;
+    }
+    .contain p{
+      display: none;
+    }
+  }

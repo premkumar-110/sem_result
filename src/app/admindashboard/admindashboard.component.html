@@ -1,0 +1,81 @@
+<p class="nav-bar">
+      <span>ADMIN</span>
+      <span style="display: flex;flex-direction: row;
+      align-items: center;justify-content: center;gap: 1vh;">Logout
+      <mat-icon (click)="logout()" aria-hidden="false" aria-label="Example home icon" fontIcon="logout"></mat-icon></span>
+
+    
+  </p>
+  <div class="contain">
+    <div class="viewdata">
+      <button color="white" class="choosedept" mat-raised-button [matMenuTriggerFor]="menu">{{departmentname}}</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)='showdeptname("Artificial Intelligence and Data Science")'>Artificial Intelligence and Data Science</button>
+        <button mat-menu-item (click)='showdeptname("Civil Engineering")'>Civil Engineering</button>
+        <button mat-menu-item (click)='showdeptname("Computer science and Engineering")'>Computer science and Engineering</button>
+        <button mat-menu-item (click)='showdeptname("Computer science and Business Systems")'>Computer science and Business Systems</button>
+        <button mat-menu-item (click)='showdeptname("Electrical and Communication Engineering")'>Electrical and Communication Engineering</button>
+        <button mat-menu-item (click)='showdeptname("Electrical and Electronics Engineering")'>Electrical and Electronics Engineering</button>
+        <button mat-menu-item (click)='showdeptname("Electrical and Instrumentation Engineering")'>Electrical and Instrumentation Engineering</button>
+        <button mat-menu-item (click)='showdeptname("Information Technology")'>Information Technology</button>
+        <button mat-menu-item (click)='showdeptname("Machanical Engineering")'>Mechanical Engineering</button>
+      </mat-menu>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_forward" (click)="search()"></mat-icon>
+    </div>
+    <p></p>
+  <div class="container1">
+
+    <strong>Upload your Sales Data</strong>
+    <mat-card color="accent" class="card">
+      <mat-form-field color="accent" floatPlaceholder="never">
+      <input [hidden]="true" (change)="onFileSelect($event)" type="file" accept=".csv" #fileSelect>
+      <input readonly matInput [(ngModel)]="filename" placeholder="Select file..."/>
+      <button matSuffix mat-icon-button (click)="fileSelect.click();"  matTooltip="Select a file" [matTooltipPosition]="'right'">
+        <mat-icon style="border-radius: 100%;color: white;">file_upload</mat-icon>
+      </button> 
+    </mat-form-field>
+    <button matTooltip="Upload the file" (click)="fileUpload()" mat-flat-button style="letter-spacing: 1px;background-color: #EEEEEE; color: #000000; min-height: 40px;">
+      <span *ngIf="!showLoader">UPLOAD</span>
+      <mat-spinner style="margin-left: 43%;" diameter="25" strokeWidth="2" *ngIf="showLoader" class="custom-spinner"></mat-spinner>
+    </button>
+  </mat-card>
+  </div>
+</div>
+<hr>
+<div class="print-btn">
+<button (click)="printDiv()">Print Student Result <span class="material-symbols-outlined">
+  download
+  </span></button></div>
+<hr>
+<div class="container" id="container" >
+  <table >
+    <tr>
+      <th>REGNO</th>
+      <th>NAME</th>
+      <th>SUB1</th>
+      <th>SUB2</th>
+      <th>SUB3</th>
+      <th>SUB4</th>
+      <th>SUB5</th>
+      <th>SUB6</th>
+      <th>SUB7</th>
+      <th>SUB8</th>
+      <th>SUB9</th>
+    </tr>
+    <tr *ngFor="let student of students">
+      <td>{{ student.name }}</td>
+      <td>{{ student.regno }}</td>
+      <td>{{ student.s1 }}</td>
+      <td>{{ student.s2 }}</td>
+      <td>{{ student.s3 }}</td>
+      <td>{{ student.s4 }}</td>
+      <td>{{ student.s5 }}</td>
+      <td>{{ student.s6 }}</td>
+      <td>{{ student.s7 }}</td>
+      <td>{{ student.s8 }}</td>
+      <td>{{ student.s9 }}</td> 
+    </tr>
+  </table>
+</div> 
+
+
