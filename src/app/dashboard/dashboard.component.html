@@ -14,7 +14,7 @@
         <tr>
             <th>Semester</th>
             <th>Course Name</th>
-            <th>Course Code</th>
+            <th>Course Code</th> 
             <th>Credits</th>
             <th>Grade</th>
             <th>Result</th>
@@ -91,7 +91,7 @@
             <td id="dppm">{{s9}}</td>
             <td id="c8"><span *ngIf="s9!='F'">Pass</span><span *ngIf="s9=='F'">Fail</span></td>
         </tr>
-        
+            
     </table>
     <div class="request">
     <p *ngIf="count>0 && !photocopyapplied" class="paper-download" (click)="applyrevaluation()"><button  class="btn-paper-download">APPLY FOR PHOTOCOPY</button></p>

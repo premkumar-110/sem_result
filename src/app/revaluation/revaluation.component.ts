@@ -55,11 +55,14 @@ export class RevaluationComponent implements OnInit {
     }
     else{
       this.showverifyotp=true;
-      
+      const failedsubjects=this.myData;
+      const selectedKeys = Object.keys(this.selectedItems);
+      localStorage.setItem('failedsubject',JSON.stringify(selectedKeys));
       this.http.post<LoginResponse>('http://localhost:5000/api/sendotp', { })
       .subscribe(response => {
         if (response.otp) {
-          this.OTP=response.otp
+          this.OTP=response.otp;
+          
         } else {
           // Display error message
           console.log(response)

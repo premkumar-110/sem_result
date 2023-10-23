@@ -42,7 +42,7 @@ export class StudentComponent {
   
   submitForm() {
     console.log(this.mail,this.pass);
-    this.http.post<LoginResponse>('http://localhost:5000/api/login', { regno: this.mail, password: this.pass })
+    this.http.post<LoginResponse>('http://127.0.0.1:5000/api/login', { regno: this.mail, password: this.pass })
       .subscribe(response => {
         if (response.regno) {
           localStorage.setItem('failedsubject',response.failed);
@@ -62,17 +62,11 @@ export class StudentComponent {
           this.ResultinfoService.photocopyapplied=response.photocopy;
           this.ResultinfoService.revaluationapplied=response.revaluation;
           this.router.navigate(['/dashboard']); 
-          this._snackBar.open('Logging In...','Ok',{
-            horizontalPosition: this.horizontalPosition,
-            verticalPosition: this.verticalPosition,duration: 2000
-          });
+          
         } else {
           // Display error message
           console.log(response)
-          this._snackBar.open('Invalid Username or Password','Ok',{
-            horizontalPosition: this.horizontalPosition,
-            verticalPosition: this.verticalPosition,duration: 2000
-          });
+          
         }
       },
       error => {

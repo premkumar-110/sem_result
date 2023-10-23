@@ -54,7 +54,8 @@ export class PhotocopyComponent {
     }
     else{
       this.showverifyotp=true;
-      
+      const selectedKeys = Object.keys(this.selectedItems);
+      localStorage.setItem('failedsubject',JSON.stringify(selectedKeys));
       this.http.post<LoginResponse>('http://localhost:5000/api/sendotp', { })
       .subscribe(response => {
         if (response.otp) {

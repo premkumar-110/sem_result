@@ -31,8 +31,6 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTableModule} from '@angular/material/table';
-import { Staff1Component } from './staff1/staff1.component';
-import { StaffloginComponent } from './stafflogin/stafflogin.component';
 
 @NgModule({
   declarations: [
@@ -43,12 +41,10 @@ import { StaffloginComponent } from './stafflogin/stafflogin.component';
     RevaluationComponent,
     PaymentComponent,
     PhotocopyComponent,
-    PhotocopyPaymentComponent,
+    PhotocopyPaymentComponent, 
     AdminloginComponent,
     AdmindashboardComponent,
-    Staff1Component,
-    StaffloginComponent
-  ],
+  ], 
   imports: [
     BrowserModule,
     AppRoutingModule,

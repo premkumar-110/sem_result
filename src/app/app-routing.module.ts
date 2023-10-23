@@ -9,8 +9,6 @@ import { PhotocopyPaymentComponent } from './photocopy-payment/photocopy-payment
 import { PhotocopyComponent } from './photocopy/photocopy.component';
 import { RevaluationComponent } from './revaluation/revaluation.component';
 import { StudentComponent } from './student/student.component';
-import { StaffloginComponent } from './stafflogin/stafflogin.component';
-import { Staff1Component } from './staff1/staff1.component';
 
 const routes: Routes = [
   {
@@ -38,14 +36,7 @@ const routes: Routes = [
   {
     path:'admindashboard',component:AdmindashboardComponent
   }
-  ,
-  {
-    path:'staff-login',component:StaffloginComponent
-  }
-  ,
-  {
-    path:'staff-1',component:Staff1Component
-  }
+  
   ,
   {
     path:'**',component:ErrorpageComponent

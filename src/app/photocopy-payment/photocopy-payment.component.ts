@@ -76,13 +76,7 @@ export class PhotocopyPaymentComponent implements OnInit{
   }
 
   run(){
-    if(this.filename=='' || this.filename==null){
-      this._snackBar.open('Upload the payment image first','Ok',{
-        horizontalPosition: this.horizontalPosition,
-        verticalPosition: this.verticalPosition,duration: 2000
-      });
-    }
-    else{
+   
       this.http.post<LoginResponse>('http://localhost:5000/api/register', {regno:this.ResultinfoService.regno,photo: true,subjects:this.myData })
       .subscribe(response => {
         console.log(this.ResultinfoService.regno);
@@ -109,7 +103,7 @@ export class PhotocopyPaymentComponent implements OnInit{
         });
       }
       );
-  }
+  
     }
     
 }

@@ -7,8 +7,10 @@
 <div class="lgn">
     <div class="contents">
     <p>Login to Access Your Result</p>
-    <input  id="regno" [(ngModel)]="mail" placeholder="Register Number">
+    <input autocomplete="off" id="regno" [(ngModel)]="mail" placeholder="Register Number">
     <input type="password" [(ngModel)]="pass"  id="dob" placeholder="DD-MM-YYYY">
     <button type="button" (click)="submitForm()">GET RESULTS</button>
 </div>
+<img src="assets/images/result.svg" width="400px" height="300px" alt="exam-result">
 </div>
+ 
